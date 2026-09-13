@@ -1861,7 +1861,6 @@ async function loadJoinOpponentPanel() {
         if (joinOpponentAvatar) joinOpponentAvatar.textContent = "O";
         if (joinOpponentItems) joinOpponentItems.innerHTML = '<div class="create-flip-loading">Opponent items could not be loaded.</div>';
         if (joinOpponentTotal) joinOpponentTotal.textContent = "0";
-        updateJoinValueMeter(window.joinFlipTargetValue || null);
     }
 
 async function loadCreateFlipInventory() {
