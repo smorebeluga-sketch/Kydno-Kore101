@@ -4016,16 +4016,6 @@ document.addEventListener("click", function (event) {
         return;
     }
 
-    const joinBtn = event.target.closest(".join-active-flip-button");
-    if (joinBtn && !joinBtn.disabled) {
-        event.preventDefault();
-        window.selectedJoinFlipId = joinBtn.dataset.flipId || null;
-        const total = Number(joinBtn.dataset.flipTotalValue) || 0;
-        window.joinFlipTargetValue = total > 0 ? total : null;
-        openCreateFlipPanel("join");
-        return;
-    }
-
     if (event.target.closest("#back-home-button")) { showHomeSection(); return; }
     if (event.target.closest("#join-duel-flips-nav-button")) { showDuelFlipsSection(); return; }
 });
