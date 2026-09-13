@@ -3632,10 +3632,11 @@ return;
 }
 
 const { data: items, error } = await supabaseClient
-.from("inventories")
-.select("*")
-.eq("user_id", user.id)
-.order("item_value", { ascending: true });
+  .from("inventories")
+    .select("*")
+      .eq("user_id", user.id)
+        .is("flip_id", null)
+          .order("item_value", { ascending: true });
 
 if (error) {
 inventoryContent.innerHTML = `
