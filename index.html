@@ -1854,14 +1854,16 @@ async function loadJoinOpponentPanel() {
         window.joinFlipTargetValue = opponentTotal;
         updateJoinValueMeter(opponentTotal);
     } catch (error) {
-        console.error("Error loading Join Flip opponent panel:", error);
+            console.error("JOIN OPPONENT ERROR:", error);
+                alert("Join Flip error: " + (error?.message || "Unknown error"));
+    }
         if (joinOpponentName) joinOpponentName.textContent = "Opponent";
         if (joinOpponentAvatar) joinOpponentAvatar.textContent = "O";
         if (joinOpponentItems) joinOpponentItems.innerHTML = '<div class="create-flip-loading">Opponent items could not be loaded.</div>';
         if (joinOpponentTotal) joinOpponentTotal.textContent = "0";
         updateJoinValueMeter(window.joinFlipTargetValue || null);
     }
-}
+
 async function loadCreateFlipInventory() {
 
 if (!createFlipItemsContainer) return;
