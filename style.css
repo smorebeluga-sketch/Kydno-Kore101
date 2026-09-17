@@ -890,6 +890,7 @@ width: 230px;
 padding: 24px 14px;
 box-sizing: border-box;
 background: rgba(10, 18, 28, 0.96);
+background: #070b12;
 border-right: 1px solid #26384b;
 box-shadow: 8px 0 30px rgba(0, 0, 0, 0.25);
 z-index: 1000;
