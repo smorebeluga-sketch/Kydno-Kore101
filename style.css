@@ -3066,3 +3066,15 @@ background: rgba(42, 115, 185, 0.9);
                        .create-flip-item.selected img {
                            transform: scale(0.97);
                            }
+/* Smaller images for admin inventory -1 rows */
+.admin-pet-image-container {
+    width: 45px;
+        height: 45px;
+            flex-shrink: 0;
+            }
+
+            .admin-pet-image {
+                width: 40px;
+                    height: 40px;
+                        object-fit: contain;
+                        }
