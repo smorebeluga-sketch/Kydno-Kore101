@@ -1219,6 +1219,39 @@ class="inventory-content"
 </div>
 
 </div>
+<!-- ================================
+ SHOP PANEL
+ ================================ -->
+ 
+ <div id="shop-panel" class="profile-panel hidden">
+ 
+     <div class="profile-box">
+     
+             <button id="close-shop" class="close-profile">×</button>
+             
+                     <h2>🛒 Shop</h2>
+                     
+                             <div class="shop-tabs">
+                             
+                                         <button type="button" id="shop-sell-button">
+                                                         Sell
+                                                                     </button>
+                                                                     
+                                                                                 <button type="button" id="shop-buy-button">
+                                                                                                 Buy
+                                                                                                             </button>
+                                                                                                             
+                                                                                                                     </div>
+                                                                                                                     
+                                                                                                                             <div id="shop-content">
+                                                                                                                             
+                                                                                                                                         <p>Select Sell or Buy above.</p>
+                                                                                                                                         
+                                                                                                                                                 </div>
+                                                                                                                                                 
+                                                                                                                                                     </div>
+                                                                                                                                                     
+                                                                                                                                                     </div>
 
 <!-- ================================
 MAIN HEADER
@@ -4067,7 +4100,32 @@ function showDuelFlipsSection() {
 if (joinFlipsButton) joinFlipsButton.addEventListener("click", showCoinFlipsSection);
 if (joinFlipsNavButton) joinFlipsNavButton.addEventListener("click", showCoinFlipsSection);
 if (joinDuelFlipsNavButton) joinDuelFlipsNavButton.addEventListener("click", showDuelFlipsSection);
+const shopNavButton = document.getElementById("shop-nav-button");
+const shopPanel = document.getElementById("shop-panel");
+const closeShop = document.getElementById("close-shop");
 
+if (shopNavButton && shopPanel) {
+    shopNavButton.addEventListener("click", () => {
+            shopPanel.classList.remove("hidden");
+                    shopPanel.classList.add("open");
+                        });
+                        }
+
+                        if (closeShop && shopPanel) {
+                            closeShop.addEventListener("click", () => {
+                                    shopPanel.classList.remove("open");
+                                            shopPanel.classList.add("hidden");
+                                                });
+                                                }
+
+                                                if (shopPanel) {
+                                                    shopPanel.addEventListener("click", (event) => {
+                                                            if (event.target === shopPanel) {
+                                                                        shopPanel.classList.remove("open");
+                                                                                    shopPanel.classList.add("hidden");
+                                                                                            }
+                                                                                                });
+                                                                                                }
 if (backHomeButton) {
     backHomeButton.addEventListener("click", showHomeSection);
 }
