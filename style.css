@@ -3078,3 +3078,24 @@ background: rgba(42, 115, 185, 0.9);
                     height: 40px;
                         object-fit: contain;
                         }
+/* ================================
+   Kydno Kore - Shop Tabs
+   ================================ */
+
+   .shop-tabs {
+       display: flex;
+           justify-content: center;
+               align-items: center;
+                   gap: 24px;
+                       width: 100%;
+                           margin: 0 auto 28px;
+                           }
+
+                           .shop-tabs button {
+                               width: 180px;
+                                   height: 52px;
+                                       border-radius: 12px;
+                                           font-size: 16px;
+                                               font-weight: 700;
+                                                   cursor: pointer;
+                                                   }
