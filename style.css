@@ -3365,3 +3365,18 @@ background: rgba(42, 115, 185, 0.9);
         font-size: 17px !important;
             font-weight: 700 !important;
             }
+
+/* Final Shop spacing adjustments */
+
+.shop-item-sell-value {
+    gap: 2px !important;
+    }
+
+    .shop-item-sell-value > span:last-child {
+        margin-left: 2px !important;
+        }
+
+        .shop-owned-quantity {
+            font-size: 20px !important;
+                font-weight: 800 !important;
+                }
