@@ -3361,3 +3361,7 @@ background: rgba(42, 115, 185, 0.9);
         .shop-item-sell-value > span:last-child {
             margin-left: 4px !important;
             }
+.shop-owned-quantity {
+        font-size: 17px !important;
+            font-weight: 700 !important;
+            }
