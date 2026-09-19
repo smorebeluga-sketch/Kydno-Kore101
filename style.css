@@ -3366,17 +3366,26 @@ background: rgba(42, 115, 185, 0.9);
             font-weight: 700 !important;
             }
 
-/* Final Shop spacing adjustments */
+/* Shop price and quantity spacing */
+.shop-inventory-item .shop-item-sell-value {
+    display: flex !important;
+        align-items: center !important;
+            gap: 0 !important;
+            }
 
-.shop-item-sell-value {
-    gap: 2px !important;
-    }
-
-    .shop-item-sell-value > span:last-child {
-        margin-left: 2px !important;
-        }
-
-        .shop-owned-quantity {
-            font-size: 20px !important;
-                font-weight: 800 !important;
+            .shop-inventory-item .shop-item-sell-value img {
+                margin-right: 2px !important;
                 }
+
+                .shop-inventory-item .shop-current-value {
+                    margin-right: 8px !important;
+                    }
+
+                    .shop-inventory-item .shop-item-sell-value > span:last-child {
+                        margin-left: 0 !important;
+                        }
+
+                        .shop-inventory-item .shop-owned-quantity {
+                            font-size: 20px !important;
+                                font-weight: 800 !important;
+                                }
