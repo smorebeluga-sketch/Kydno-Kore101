@@ -3354,3 +3354,10 @@ background: rgba(42, 115, 185, 0.9);
                                                                                                                                     font-weight: 700 !important;
                                                                                                                                         text-align: center !important;
                                                                                                                                         }
+.shop-item-sell-value {
+        gap: 6px !important;
+        }
+
+        .shop-item-sell-value > span:last-child {
+            margin-left: 4px !important;
+            }
