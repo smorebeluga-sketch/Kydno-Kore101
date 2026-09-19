@@ -1153,21 +1153,40 @@ body > * { max-width:100% !important; }
                                                                     font-size: 15px;
                                                                         line-height: 1;
                                                                         }
-                                                                        .shop-nav-button img {
-                                                                                width: 32px;
-                                                                                    height: 32px;
-                                                                                        object-fit: contain;
-                                                                                            display: block;
-                                                                                            }
+                                                                    .shop-nav-button {
+                                                                            border: 1px solid rgba(85,170,255,.35);
+                                                                                background: rgba(18,31,48,.85);
+                                                                                    color: #9ed5ff;
+                                                                                        cursor: pointer;
+                                                                                            padding: 6px 10px;
+                                                                                                border-radius: 10px;
+                                                                                                    font-weight: 700;
+                                                                                                        transition: .2s ease;
 
-                                                                                            .shop-nav-button {
-                                                                                                width: 42px;
-                                                                                                    height: 42px;
-                                                                                                        padding: 4px;
                                                                                                             display: inline-flex;
                                                                                                                 align-items: center;
                                                                                                                     justify-content: center;
-                                                                                                                    }
+                                                                                                                        gap: 7px;
+
+                                                                                                                            height: 42px;
+                                                                                                                                width: auto;
+                                                                                                                                    white-space: nowrap;
+                                                                                                                                    }
+
+                                                                                                                                    .shop-nav-button img {
+                                                                                                                                        width: 28px;
+                                                                                                                                            height: 28px;
+                                                                                                                                                object-fit: contain;
+                                                                                                                                                    display: block;
+                                                                                                                                                        flex-shrink: 0;
+                                                                                                                                                        }
+
+                                                                                                                                                        .shop-nav-button:hover {
+                                                                                                                                                            background: rgba(42,115,185,.28);
+                                                                                                                                                                border-color: rgba(85,170,255,.7);
+                                                                                                                                                                    transform: translateY(-1px);
+                                                                                                                                                                    }
+                                                                    }
                                                                         
                                                                         </style>
 </head>
@@ -1260,10 +1279,9 @@ Join Flips
 Join Duel Flips
 </button>
 <button type="button" id="shop-nav-button" class="shop-nav-button">
-        <img src="shop-logo.png" alt="" class="shop-raccoon">
+        <img src="shop-logo.png" alt="">
             <span>Shop</span>
             </button>
-
 </div>
 <!-- RIGHT: ACCOUNT BUTTONS -->
 <div class="header-actions">
