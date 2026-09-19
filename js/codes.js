@@ -92,33 +92,37 @@ window.kydnoAdminKash = {
                                                                                                                                                                                                                                                                                                                                                             targetUserId,
                                                                                                                                                                                                                                                                                                                                                                         -Math.abs(Number(amount))
                                                                                                                                                                                                                                                                                                                                                                                 );
-                                                                                                                                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                                                                                                                                    };
-// ================================
-// Kydno Kore - Shop Sell View
-// ================================
-
-const shopSellButton = document.getElementById("shop-sell-button");
-const shopBuyButton = document.getElementById("shop-buy-button");
-const shopSellView = document.getElementById("shop-sell-view");
-
-if (shopSellButton && shopSellView) {
-
-    shopSellButton.addEventListener("click", () => {
-
-            shopSellView.classList.remove("hidden");
-
-                    if (shopBuyButton) {
-                                shopBuyButton.classList.remove("active");
-                                        }
-
-                                                shopSellButton.classList.add("active");
-
-                                                    });
-
-                                                    }
-// ================================
+                                 
+                                 // ================================
+                                 // // Kydno Kore - Shop Sell View
+                                 // ================================
+                                 
+                                 const shopSellButton = document.getElementById("shop-sell-button");
+                                 const shopBuyButton = document.getElementById("shop-buy-button");
+                                 const shopSellView = document.getElementById("shop-sell-view");
+                                 
+                                 if (shopSellButton) {
+                                 
+                                     shopSellButton.addEventListener("click", () => {
+                                     
+                                             if (shopSellView) {
+                                                         shopSellView.classList.remove("hidden");
+                                                                 }
+                                                                 
+                                                                         if (shopBuyButton) {
+                                                                                     shopBuyButton.classList.remove("active");
+                                                                                             }
+                                                                                             
+                                                                                                     shopSellButton.classList.add("active");
+                                                                                                     
+                                                                                                             if (typeof loadShopSellInventory === "function") {
+                                                                                                                         loadShopSellInventory();
+                                                                                                                                 }
+                                                                                                                                 
+                                                                                                                                     });
+                                                                                                                                     
+                                                                                                                                     }                                                                                                                                                                                                                                                                                                                                       }                                                                                                                                                                                                                                                                                                                                                                                };
+// ================================                                                                                                                                                                                                                                                                                                                                                                                   
 // Kydno Kore - Shop Inventory Setup
 // ================================
 
