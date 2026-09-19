@@ -104,6 +104,7 @@ window.kydnoAdminKash = {
                                  if (shopSellButton) {
                                  
                                      shopSellButton.addEventListener("click", () => {
+                                        alert("SELL BUTTON WORKED");
                                      
                                              if (shopSellView) {
                                                          shopSellView.classList.remove("hidden");
