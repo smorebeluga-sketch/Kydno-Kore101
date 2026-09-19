@@ -3380,3 +3380,9 @@ background: rgba(42, 115, 185, 0.9);
                         font-size: 20px !important;
                             font-weight: 800 !important;
                             }
+/* Remove mobile tap flash from Shop inventory rows */
+.shop-inventory-item {
+    -webkit-tap-highlight-color: transparent !important;
+        user-select: none !important;
+            -webkit-user-select: none !important;
+            }
