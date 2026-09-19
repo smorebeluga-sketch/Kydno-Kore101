@@ -95,3 +95,113 @@ window.kydnoAdminKash = {
                                                                                                                                                                                                                                                                                                                                                                                     }
 
                                                                                                                                                                                                                                                                                                                                                                                     };
+// ================================
+// Kydno Kore - Shop Sell View
+// ================================
+
+const shopSellButton = document.getElementById("shop-sell-button");
+const shopBuyButton = document.getElementById("shop-buy-button");
+const shopSellView = document.getElementById("shop-sell-view");
+
+if (shopSellButton && shopSellView) {
+
+    shopSellButton.addEventListener("click", () => {
+
+            shopSellView.classList.remove("hidden");
+
+                    if (shopBuyButton) {
+                                shopBuyButton.classList.remove("active");
+                                        }
+
+                                                shopSellButton.classList.add("active");
+
+                                                    });
+
+                                                    }
+// ================================
+// Kydno Kore - Shop Inventory Setup
+// ================================
+
+window.kydnoShop = {
+
+    selectedItems: [],
+
+        clearSelection() {
+                this.selectedItems = [];
+
+                        const count = document.getElementById("shop-selected-count");
+                                const total = document.getElementById("shop-sell-total");
+                                        const sellButton = document.getElementById("shop-sell-selected");
+
+                                                if (count) {
+                                                            count.textContent = "0 items";
+                                                                    }
+
+                                                                            if (total) {
+                                                                                        total.textContent = "0";
+                                                                                                }
+
+                                                                                                        if (sellButton) {
+                                                                                                                    sellButton.disabled = true;
+                                                                                                                            }
+
+                                                                                                                                    document
+                                                                                                                                                .querySelectorAll(".shop-inventory-item.selected")
+                                                                                                                                                            .forEach(item => {
+                                                                                                                                                                            item.classList.remove("selected");
+                                                                                                                                                                                        });
+                                                                                                                                                                                            },
+
+                                                                                                                                                                                                updateSummary() {
+
+                                                                                                                                                                                                        const count = document.getElementById("shop-selected-count");
+                                                                                                                                                                                                                const total = document.getElementById("shop-sell-total");
+                                                                                                                                                                                                                        const sellButton = document.getElementById("shop-sell-selected");
+
+                                                                                                                                                                                                                                let totalValue = 0;
+
+                                                                                                                                                                                                                                        this.selectedItems.forEach(item => {
+                                                                                                                                                                                                                                                    totalValue += Number(item.value || 0) * 0.90;
+                                                                                                                                                                                                                                                            });
+
+                                                                                                                                                                                                                                                                    if (count) {
+                                                                                                                                                                                                                                                                                count.textContent =
+                                                                                                                                                                                                                                                                                                `${this.selectedItems.length} ${
+                                                                                                                                                                                                                                                                                                                    this.selectedItems.length === 1 ? "item" : "items"
+                                                                                                                                                                                                                                                                                                                                    }`;
+                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                    if (total) {
+                                                                                                                                                                                                                                                                                                                                                                total.textContent =
+                                                                                                                                                                                                                                                                                                                                                                                Math.floor(totalValue).toLocaleString("en-US");
+                                                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                                                                if (sellButton) {
+                                                                                                                                                                                                                                                                                                                                                                                                            sellButton.disabled =
+                                                                                                                                                                                                                                                                                                                                                                                                                            this.selectedItems.length === 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                                                                                                                        },
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                            selectItem(itemElement, itemData) {
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    const existingIndex = this.selectedItems.findIndex(
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                item => item.id === itemData.id
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        );
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                if (existingIndex !== -1) {
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            this.selectedItems.splice(existingIndex, 1);
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        itemElement.classList.remove("selected");
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } else {
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            this.selectedItems.push(itemData);
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        itemElement.classList.add("selected");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        this.updateSummary();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            };
