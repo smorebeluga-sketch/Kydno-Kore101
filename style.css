@@ -3239,3 +3239,63 @@ background: rgba(42, 115, 185, 0.9);
                                                                                                                    content: "🛒";
                                                                                                                        font-size: 22px;
                                                                                                                        }
+/* =====================================
+   Kydno Kore - Shop Quantity Controls
+   ===================================== */
+
+   .shop-inventory-item {
+       position: relative !important;
+           padding-right: 155px !important;
+           }
+
+           .shop-quantity-controls {
+               position: absolute !important;
+                   right: 16px !important;
+                       top: 50% !important;
+                           transform: translateY(-50%) !important;
+
+                               display: flex !important;
+                                   align-items: center !important;
+                                       justify-content: center !important;
+                                           gap: 8px !important;
+
+                                               height: 52px !important;
+                                               }
+
+                                               .shop-quantity-controls button {
+                                                   width: 46px !important;
+                                                       height: 46px !important;
+
+                                                           display: flex !important;
+                                                               align-items: center !important;
+                                                                   justify-content: center !important;
+
+                                                                       border: 1px solid rgba(100, 170, 255, 0.3) !important;
+                                                                           border-radius: 10px !important;
+
+                                                                               background: rgba(15, 30, 50, 0.95) !important;
+                                                                                   color: #ffffff !important;
+
+                                                                                       font-size: 25px !important;
+                                                                                           font-weight: 700 !important;
+                                                                                               line-height: 1 !important;
+
+                                                                                                   cursor: pointer !important;
+                                                                                                       box-sizing: border-box !important;
+                                                                                                       }
+
+                                                                                                       .shop-quantity-controls button:hover {
+                                                                                                           background: rgba(25, 50, 80, 0.98) !important;
+                                                                                                           }
+
+                                                                                                           .shop-selected-quantity {
+                                                                                                               min-width: 34px !important;
+
+                                                                                                                   display: flex !important;
+                                                                                                                       align-items: center !important;
+                                                                                                                           justify-content: center !important;
+
+                                                                                                                               color: #ffffff !important;
+                                                                                                                                   font-size: 19px !important;
+                                                                                                                                       font-weight: 700 !important;
+                                                                                                                                       }
