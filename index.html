@@ -1401,13 +1401,14 @@ Profile
                                                                                                                                                                         <div id="shop-buy-view" class="shop-view hidden">
 
                                                                                                                                                                             <div id="shop-buy-list" class="shop-buy-list"></div>
+                                                                                                                                                                            <div class="shop-empty-state">
+                                                                                                                                                                                    <h3>Shop is empty</h3>
+                                                                                                                                                                                        <p>Items sold by players will appear here.</p>
+                                                                                                                                                                                        </div>
 
                                                                                                                                                                             </div>
 
-                                                                                                                                                                                        <div class="shop-empty-state">
-                                                                                                                                                                                                    <h3>Shop is empty</h3>
-                                                                                                                                                                                                                <p>Items sold by players will appear here.</p>
-                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                        
 
                                                                                                                                                                                                                             </div>
 
@@ -4312,6 +4313,7 @@ function showHomeSection() {
                                                                                                                                                 if (shopSellView) shopSellView.classList.remove("hidden");
                                                                                                                                                         if (shopBuyView) shopBuyView.classList.add("hidden");
                                                                                                                                                                 if (shopSellBar) shopSellBar.classList.remove("hidden");
+                                                                                                                                                                loadShopSellInventory();
                                                                                                                                                                     });
                                                                                                                                                                     }
 
