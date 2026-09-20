@@ -479,11 +479,7 @@ window.kydnoShop = {
                                                                                                                                              itemValue *
                                                                                                                                                              0.90;
 
-                                                                                                                                                                         if (selectedQuantity > 0) {
-                                                                                                                                                                                         itemRow.classList.add("selected");
-                                                                                                                                                                                                     } else {
-                                                                                                                                                                                                                     itemRow.classList.remove("selected");
-                                                                                                                                                                                                                                 }
+                                                                                                                                                                         
 
                                                                                                                                                                                                                                          });
 
