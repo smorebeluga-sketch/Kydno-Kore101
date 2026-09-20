@@ -4296,6 +4296,27 @@ function showHomeSection() {
                                                                                                                                 if (shopNavButton) {
                                                                                                                                     shopNavButton.addEventListener("click", showShopSection);
                                                                                                                                     }
+                                                                                                                                    const shopSellButton = document.getElementById("shop-sell-button");
+                                                                                                                                    const shopBuyButton = document.getElementById("shop-buy-button");
+                                                                                                                                    const shopSellView = document.getElementById("shop-sell-view");
+                                                                                                                                    const shopBuyView = document.getElementById("shop-buy-view");
+                                                                                                                                    const shopSellBar = document.getElementById("shop-sell-bar");
+
+                                                                                                                                    if (shopSellButton) {
+                                                                                                                                        shopSellButton.addEventListener("click", () => {
+                                                                                                                                                if (shopSellView) shopSellView.classList.remove("hidden");
+                                                                                                                                                        if (shopBuyView) shopBuyView.classList.add("hidden");
+                                                                                                                                                                if (shopSellBar) shopSellBar.classList.remove("hidden");
+                                                                                                                                                                    });
+                                                                                                                                                                    }
+
+                                                                                                                                                                    if (shopBuyButton) {
+                                                                                                                                                                        shopBuyButton.addEventListener("click", () => {
+                                                                                                                                                                                if (shopSellView) shopSellView.classList.add("hidden");
+                                                                                                                                                                                        if (shopBuyView) shopBuyView.classList.remove("hidden");
+                                                                                                                                                                                                if (shopSellBar) shopSellBar.classList.add("hidden");
+                                                                                                                                                                                                    });
+                                                                                                                                                                                                    }
 if (backHomeButton) {
     backHomeButton.addEventListener("click", showHomeSection);
 }
