@@ -3,6 +3,7 @@
 // ========================================
 
 async function joinKydnoFlip(flipId, selectedItemIds) {
+        console.log("JOIN COINFLIP FUNCTION CALLED", flipId, selectedItemIds);
                             if (!flipId) {
                                     alert("Flip ID is missing.");
                                             return null;
