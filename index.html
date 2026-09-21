@@ -3277,6 +3277,7 @@ const selectedJoinItemIds = selectedJoinItemButtons
     .map(item => Number(item.dataset.itemId))
         .filter(id => Number.isFinite(id));
 
+        alert("JOIN HANDLER REACHED");
         const joinResult = await joinKydnoFlip(
             flip.id,
                 selectedJoinItemIds
