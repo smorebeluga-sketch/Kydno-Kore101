@@ -64,13 +64,13 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Admin code list error:", error);
 
         codeList.innerHTML = `
-                                                                                                                                                                                                                                                                                                                            <div style="
-                                                                                                                                                                                                                                                                                                                                                    padding:14px;
-                                                                                                                                                                                                                                                                                                                                                                            color:#ff7777;
-                                                                                                                                                                                                                                                                                                                                                                                                ">
-                                                                                                                                                                                                                                                                                                                                                                                                                        Unable to load codes.
-                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            `;
+            <div style="
+                    padding:14px;
+                            color:#ff7777;
+                                ">
+                                        Unable to load codes: ${escapeHtml(error.message)}
+                                            </div>
+                                            `;
 
         return;
       }
