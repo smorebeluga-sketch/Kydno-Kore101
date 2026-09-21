@@ -24,8 +24,7 @@ window.kydnoRedeemCodes = {
                                                                                                                                                                                         input_code: cleanCode
                                                                                                                                                                                                             }
                                                                                                                                                                                                                             );
-                                                                                                                                                                                                                            console.log("KASH CODE RPC DATA:", data);
-                                                                                                                                                                                                                            console.log("KASH CODE RPC ERROR:", error);
+                                                                                                                                                                                                                            
 
                                                                                                                                                                                                                                         if (error) {
                                                                                                                                                                                                                                                         console.error("Redeem code error:", error);
