@@ -2101,6 +2101,7 @@ Create Flip
 const SUPABASE_URL = "https://hnavfaxqrygqlcfldubg.supabase.co";
 const SUPABASE_KEY = "sb_publishable_zzbxRMNlAN5GriNXG2OYVQ_qAEN2lIN";
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+window.supabaseClient = supabaseClient;
 
 const sideButtons = document.querySelectorAll(".side-btn");
 const buttons = document.querySelectorAll(".flip-button");
