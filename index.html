@@ -3272,8 +3272,20 @@ if (readyStatus) readyStatus.textContent = "Ready to join";
 const joinButtonText = document.getElementById("confirm-flip-button-text");
 if (joinButtonText) joinButtonText.textContent = "Join Flip";
 console.log("Join Flip ready:", { flip, selectedItems: selectedJoinItemButtons.map(item => ({ id: item.dataset.itemId, value: Number(item.dataset.itemValue || 0) })) });
-alert("Your selection matches the required value range. The next step will connect this panel to the flip result.");
-return;
+const selectedJoinItemIds = selectedJoinItemButtons
+    .map(item => Number(item.dataset.itemId))
+        .filter(id => Number.isFinite(id));
+
+        const joinResult = await joinKydnoFlip(
+            flip.id,
+                selectedJoinItemIds
+                );
+
+                if (!joinResult) {
+                    return;
+                    }
+
+                    console.log("Flip finished:", joinResult);
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                 }
 
@@ -5255,6 +5267,7 @@ document.addEventListener("click", function(event) {
 <script src="js/redeem-codes.js"></script>
 <script src="js/admin-codes.js"></script>
 <script src="js/admin-panels.js"></script>
+<script src="js/coinflip.js"></script>
 <script src="fixes.js"></script>
 </body>
 </html>
