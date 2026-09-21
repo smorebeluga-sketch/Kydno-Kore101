@@ -3,12 +3,6 @@
 // ========================================
 
 async function joinKydnoFlip(flipId, selectedItemIds) {
-
-    if (!window.supabaseClient) {
-            alert("Supabase is not ready.");
-                    return null;
-                        }
-
                             if (!flipId) {
                                     alert("Flip ID is missing.");
                                             return null;
