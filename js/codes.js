@@ -861,11 +861,14 @@ window.kydnoShop = {
                                                                                                                                                             }
                                                                                                                                                                     );
 
-                                                                                                                                                                            if (error) {
-                                                                                                                                                                                        console.error("Shop buy error:", error);
-                                                                                                                                                                                                    alert(error.message || "Unable to buy item.");
-                                                                                                                                                                                                                return;
-                                                                                                                                                                                                                        }
+                                                                                                                                                                        if (error) {
+                                                                                                                                                                                    console.error("Shop buy error:", error);
+
+                                                                                                                                                                                        row.classList.add("shop-buy-error");
+
+                                                                                                                                                                                            return;
+                                                                                                                                                                                            }
+                                                                                                                                                                        
 
                                                                                                                                                                                                                                 // Refresh the Kash balance immediately
                                                                                                                                                                                                                                         if (

@@ -3386,3 +3386,9 @@ background: rgba(42, 115, 185, 0.9);
         user-select: none !important;
             -webkit-user-select: none !important;
             }
+            .shop-buy-item.shop-buy-error {
+                    border-color: rgba(255, 70, 70, 0.95) !important;
+                        background: rgba(120, 20, 20, 0.45) !important;
+                            box-shadow: 0 0 18px rgba(255, 50, 50, 0.35) !important;
+                            }
+            
