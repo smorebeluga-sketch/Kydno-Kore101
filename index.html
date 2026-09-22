@@ -3236,6 +3236,7 @@ async function loadDuelFlips() {
 
                                                                                                                                                                                                                                                                                                                                                                                 // Fresh database check: never trust only the visual meter.
 const targetValue = Number(flip.total_value);
+alert("CALCULATING JOIN LIMITS");
 const limits = getJoinValueLimits(targetValue);
 
 if (!limits) {
