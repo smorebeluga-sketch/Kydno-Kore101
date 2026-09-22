@@ -3245,7 +3245,7 @@ try {
         console.log("JOIN LIMITS:", limits);
         } catch (error) {
             console.error("JOIN LIMIT CALCULATION ERROR:", error);
-                alert("Join limit calculation failed. Check console.");
+                alert("JOIN LIMIT ERROR:\n" + (error?.message || error));
                     return;
                     }
 
