@@ -2738,6 +2738,7 @@ selectAllItemsButton.addEventListener("click", async (event) => {
                 .select("total_value")
                 .eq("id", window.selectedJoinFlipId)
                 .single();
+                alert("SUPABASE FLIP LOOKUP FINISHED");
 
             if (flipError || !flip) {
                 console.error("Unable to load flip for Auto Fill:", flipError);
