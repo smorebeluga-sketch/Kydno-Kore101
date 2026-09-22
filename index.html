@@ -2350,7 +2350,13 @@ async function loadJoinOpponentPanel() {
         if (joinOpponentTotal) joinOpponentTotal.textContent = "0";
     }
 }
+function getJoinValueLimits(targetValue) {
+    const target = Number(targetValue);
+        if (!Number.isFinite(target) || target <= 0) return null;
+            return { target, minimum: target * 0.95, maximum: target * 1.05 };
+            }
 
+            
 async function loadCreateFlipInventory() {
 
 if (!createFlipItemsContainer) return;
@@ -2503,12 +2509,6 @@ const joinValueMaxMarker = document.getElementById("join-value-max-marker");
 
 function formatJoinValue(value) {
     return Number(value || 0).toLocaleString();
-}
-
-function getJoinValueLimits(targetValue) {
-    const target = Number(targetValue);
-    if (!Number.isFinite(target) || target <= 0) return null;
-    return { target, minimum: target * 0.95, maximum: target * 1.05 };
 }
 
 function getSelectedCreateFlipValue() {
