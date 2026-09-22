@@ -3282,6 +3282,7 @@ const selectedJoinItemIds = selectedJoinItemButtons
         .filter(id => Number.isFinite(id));
 
         alert("JOIN HANDLER REACHED");
+        alert("CALLING COINFLIP FUNCTION");
         const joinResult = await joinKydnoFlip(
             flip.id,
                 selectedJoinItemIds
