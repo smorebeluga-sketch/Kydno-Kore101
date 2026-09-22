@@ -3236,8 +3236,18 @@ async function loadDuelFlips() {
 
                                                                                                                                                                                                                                                                                                                                                                                 // Fresh database check: never trust only the visual meter.
 const targetValue = Number(flip.total_value);
-alert("CALCULATING JOIN LIMITS");
-const limits = getJoinValueLimits(targetValue);
+console.log("TARGET VALUE:", targetValue);
+
+let limits;
+
+try {
+    limits = getJoinValueLimits(targetValue);
+        console.log("JOIN LIMITS:", limits);
+        } catch (error) {
+            console.error("JOIN LIMIT CALCULATION ERROR:", error);
+                alert("Join limit calculation failed. Check console.");
+                    return;
+                    }
 
 if (!limits) {
     alert("This flip has an invalid target value.");
