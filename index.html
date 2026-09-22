@@ -3247,6 +3247,7 @@ if (flip.status !== "waiting") {
     await loadActiveFlips();
     return;
 }
+alert("PAST FLIP STATUS CHECK");
 
 if (selectedValue < limits.minimum) {
     alert(`Your selected value is too low. Required: ${formatJoinValue(limits.minimum)} – ${formatJoinValue(limits.maximum)}.`);
