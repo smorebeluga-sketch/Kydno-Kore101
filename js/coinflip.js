@@ -17,7 +17,9 @@ async function joinKydnoFlip(flipId, selectedItemIds) {
 
                                                                             try {
 
-                                                                                    const {
+
+                                                                                    alert("ABOUT TO CALL SUPABASE");
+                                                                                const {
                                                                                                 data,
                                                                                                             error
                                                                                                                     } = await supabaseClient.rpc("join_coinflip", {
