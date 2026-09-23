@@ -3,7 +3,6 @@
 // ========================================
 
 async function joinKydnoFlip(flipId, selectedItemIds) {
-        alert("COINFLIP FUNCTION REACHED");
         console.log("JOIN COINFLIP FUNCTION CALLED", flipId, selectedItemIds);
                             if (!flipId) {
                                     alert("Flip ID is missing.");
@@ -18,7 +17,6 @@ async function joinKydnoFlip(flipId, selectedItemIds) {
                                                                             try {
 
 
-                                                                                    alert("ABOUT TO CALL SUPABASE");
                                                                                 const {
                                                                                                 data,
                                                                                                             error
@@ -41,12 +39,6 @@ async function joinKydnoFlip(flipId, selectedItemIds) {
                                                                                                                                                                                                                                                         }
 
                                                                                                                                                                                                                                                                 console.log("Coinflip resolved:", result);
-                                                                                                                                                                                                                                                                alert(
-                                                                                                                                                                                                                                                                    "COINFLIP RESULT:\n" +
-                                                                                                                                                                                                                                                                        "Success: " + result.success + "\n" +
-                                                                                                                                                                                                                                                                            "Winner: " + result.winner_id + "\n" +
-                                                                                                                                                                                                                                                                                "Side: " + result.winning_side
-                                                                                                                                                                                                                                                                                );
                                                                                                                                                                                                                                                                                 return result;
 
                                                                                                                                                                                                                                                                             } catch (error) {

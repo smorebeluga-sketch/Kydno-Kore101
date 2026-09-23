@@ -3174,14 +3174,11 @@ async function loadDuelFlips() {
                         async () => {
                                 if (window.flipPanelMode === "join") {
                                 console.log("JOIN FLIP BUTTON CLICKED");
-                                alert("BUTTON CLICK IS WORKING");
-                                alert("JOIN HANDLER REACHED");
 
                                             const selectedItems =
                                                     createFlipItemsContainer.querySelectorAll(
                                                                 ".create-flip-item.selected"
                                                                         );
-                                                                        alert("SELECTED ITEMS: " + selectedItems.length);
 
                                                                             if (selectedItems.length === 0) {
 
@@ -3205,7 +3202,6 @@ async function loadDuelFlips() {
                                                                                                                                                                                     }
                                                                                                                                                                                         );
 
-                                                                                                                                                                                         alert("LOADING FLIP FROM SUPABASE");   
                                                                                                                                                                                         let flip = window.kkFlipCache?.[String(window.selectedJoinFlipId)] || null;
 
                                                                                                                                                                                         if (!flip) {
@@ -3225,7 +3221,6 @@ async function loadDuelFlips() {
                                                                                                                                                                                                                                                                         flip = data;
                                                                                                                                                                                                                                                                         }
 
-                                                                                                                                                                                                                                                                       alert("FLIP LOOKUP FINISHED");
                                                                                                                                                                                                                                                                         if (!flip) {
                                                                                                                                                                                                                                                                             alert("This flip is no longer available.");
                                                                                                                                                                                                                                                                                 await loadActiveFlips();
@@ -3236,7 +3231,6 @@ async function loadDuelFlips() {
 
                                                                                                                                                                                                                                                                                                                                                                                 // Fresh database check: never trust only the visual meter.
 const targetValue = Number(flip.total_value);
-alert("TOTAL: " + flip.total_value + "\nTARGET: " + targetValue);
 
 let limits;
 
@@ -3259,7 +3253,6 @@ if (flip.status !== "waiting") {
     await loadActiveFlips();
     return;
 }
-alert("PAST FLIP STATUS CHECK");
 
 if (selectedValue < limits.minimum) {
     alert(`Your selected value is too low. Required: ${formatJoinValue(limits.minimum)} – ${formatJoinValue(limits.maximum)}.`);
@@ -3294,8 +3287,6 @@ const selectedJoinItemIds = selectedJoinItemButtons
     .map(item => Number(item.dataset.itemId))
         .filter(id => Number.isFinite(id));
 
-        alert("JOIN HANDLER REACHED");
-        alert("CALLING COINFLIP FUNCTION");
         const joinResult = await joinKydnoFlip(
             flip.id,
                 selectedJoinItemIds
