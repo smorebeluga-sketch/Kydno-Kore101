@@ -3126,15 +3126,11 @@ async function loadDuelFlips() {
         const itemCount = Array.isArray(flip.items) ? flip.items.length : 0;
         const flipCard = document.createElement("div");
         flipCard.className = "active-flip-card";
-        flipCard.innerHTML = `
-            <div class="active-flip-card-header">
-                <div><strong>Duel Flip</strong><span>${itemCount} item${itemCount === 1 ? "" : "s"}</span></div>
-                <span class="active-flip-value">${Number(flip.total_value || 0).toLocaleString()}</span>
-            </div>
-            <div class="active-flip-card-body">
-                <div class="active-flip-side">${String(flip.host_side || "heads").toUpperCase()}</div>
-                <button type="button" class="join-active-flip-button" data-flip-id="${escapeJoinPanelText(flip.id)}" data-flip-total-value="${Number(flip.total_value || 0)}">Join Flip</button>
-            </div>`;
+        flipCard.innerHTML =
+            window.createFlipRow(
+                    flip,
+                            currentUser
+                                );
         if (currentUser?.id && flip.host_id === currentUser.id) {
             const btn = flipCard.querySelector(".join-active-flip-button");
             if (btn) { btn.disabled = true; btn.textContent = "Your Flip"; }
